@@ -1,0 +1,256 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.mainpicture{
+    position: absolute;
+    width: 100%;
+    height: 130vh;
+    background-image: url("./resource/Background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.menubackground {
+    position: absolute;
+    top: 110vh;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 110px;
+    background-color: #4d4d4d;
+    opacity: 0.91;
+    text-align: center;
+    font-family: "Berlin Sans FB Demi";
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e7af63;
+}
+.menubackground:hover{
+    background-color: #858484;
+}
+.listbackground{
+    background-image: url("./resource/meniuback.jpg");
+    position: absolute;
+    top: 130vh;
+    width: 100%;
+    height: 140vh;
+    background-size:  cover;
+}
+.container {
+<!-- pentru a centra intreaga pagina -->
+    max-width: 1200px;
+    margin-left: 5em;
+    padding: 1.5em;
+    color:#e7af63;
+}
+
+.menu {
+
+<!-- este gandit pentru telefon prima data, sa arate mandru -->
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.menu-group-heading {
+
+<!-- facem delimitarea -->
+    margin: 0;
+    padding-bottom: 1em; <!-- 1*14 px=14px -->
+    border-bottom: 2px solid #ccc;
+
+}
+
+.menu-group {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5em;
+    padding-right:4em ;
+}
+
+.menu-item {
+    display: flex;
+}
+
+.menu-item-image {
+
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+}
+.menu-item-price{
+    padding: 0;
+    margin-left: 4em;
+}
+.menu-item-text {
+    flex-grow: 1;
+}
+
+.menu-item-heading {
+    justify-content: flex-start;
+    display: flex;
+    margin: 0;
+
+}
+
+.menu-item-name {
+    margin-right: auto;
+}
+
+.menu-item-description {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media screen and (min-width: 992px) {
+
+    .menu {
+        font-size: 16px;
+    }
+
+    .menu-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-item-image {
+        width: 125px;
+        height: 125px;
+    }
+}
+head{
+
+}
+.windowincrement{
+    text-align: center;
+    font-size: 20px;
+    width: 1.2em;
+}
+.windowincrement-container{
+    margin-left: 1em;
+    align-items: normal;
+}
+.buttonincrment:hover{
+    background-color: #efcc53;
+}
+.buttonincrment{
+    font-size: 1em;
+    background-color: #e79f04;
+}
+.mini-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-align: left;
+    z-index: 9999;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.mini-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mini-menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+.mini-menu-item:last-child {
+    border-top: 1px solid #ddd;
+}
+
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item-name {
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.total-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    padding-top: 8px;
+}
+
+.item-price {
+    color: #888;
+    margin-left: auto;
+}
+
+.total-price {
+    color: #333;
+    text-align: right;
+}
+
+.total-label {
+    margin-right: 10px;
+    text-align: left;
+}
+#showMiniMenuButton {
+    background-color: rgb(255, 255, 255); /* Adjust the alpha value as needed */
+    border: none;
+    width: 6em;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+
+}
+
+
+#miniMenuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 60px; /* Adjust the top position as needed */
+    right: 20px;
+    width: 300px; /* Set a fixed width */
+    max-height: 400px; /* Set a maximum height */
+    overflow-y: auto; /* Add scrollbars when content exceeds the height */
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 9998; /* Ensure the list is below the button */
+}
+.submit-button-container {
+    text-align: center;
+    margin-top: 12px;
+    position: relative;
+}
+
+#submitButton {
+    display: none;
+    background-color: #f2f2f2;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.custom-quantity-container{
+    text-align: center;
+    margin-top: 12px;
+    position: relative;
+}
+.tex

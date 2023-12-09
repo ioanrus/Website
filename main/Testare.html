@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- charset attribute specifies the character encoding for the HTML document-->
+    <meta charset="UTF-8">
+    <!--Specifying edge mode instructs Internet Explorer to render and display content in the highest mode that is available.-->
+    <meta http-equiv="X-UA-Compatible" content="Ie=edge">
+    <!--width=device-width part sets the width of the page to follow the screen-width of the device-->
+    <!--initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser-->
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <title>Casa Bârsan</title>
+    <!--link css file to this-->
+    <link rel="stylesheet" href="./testare.css">
+
+</head>
+<body>
+
+
+<div class="mainpicture">
+    <div class="menubackground">
+        <H2>Restaurant Menu</H2>
+    </div>
+</div>
+<div class="mini-menu">
+    <button id="showMiniMenuButton" onclick="toggleMiniMenuVisibility()">Show Order</button>
+    <ul class="mini-menu-list" id="miniMenuList" style="display: none;"></ul>
+    <div class="submit-button-container">
+        <button id="submitButton" onclick="submitOrder()">Submit</button>
+    </div>
+    <div class="custom-quantity-container">
+        <input type="text" id="customItemInput" placeholder="Description order">
+    </div>
+    <div class="custom-quantity-container">
+        <input type="text" id="customItemInput2" placeholder="Numar masa:">
+    </div>
+</div>
+<div class="listbackground">
+        <div class="container">
+            <div class="menu">
+                <h2 class="menu-group-heading">
+                    Food
+                </h2>
+                <div class="menu-group">
+                    <div class="menu-item">
+                        <img class="menu-item-image" src="./resource/sibiuburger.jpg" alt="burgersibiu">
+                        <div class="menu-item-text">
+                            <h3 class="menu-item-heading">
+                                <span class="menu-item-name">Sibiu Burger</span>
+                                <span class="menu-item-price">$15.90</span>
+                                <div class="windowincrement-container">
+                                    <button class="buttonincrment" onclick="decrement('number0','Sibiu Burger','15.90')">-</button>
+                                    <input  class="windowincrement" id="number0" value="0">
+                                    <button class="buttonincrment" onclick="increment('number0','Sibiu Burger','15.90')">+</button>
+                                </div>
+
+                            </h3>
+                            <p class="menu-item-description">
+                                Burger de vită din Mărginimea Sibiului servit în chiflă făcută în casă, cu brânză de burduf Torockoi,
+                                ardei kapia pe jar, salată verde, sos ușor de usturoi copt, cartofi prăjiți de Râșca în untură,
+                                salată de rădăcinoase .
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img class="menu-item-image" src="./resource/pizzadiavola.jpg" alt="pizzadiavolo">
+                        <div class="menu-item-text">
+                            <h3 class="menu-item-heading">
+                                <span class="menu-item-name">Pizza Diavola</span>
+                                <span class="menu-item-price">$8.90</span>
+                                <div class="windowincrement-container">
+                                    <button class="buttonincrment" onclick="decrement('number1','Pizza Diavola','8.90')">-</button>
+                                    <input  class="windowincrement" id="number1" value="0">
+                                    <button class="buttonincrment" onclick="increment('number1','Pizza Diavola','8.90')">+</button>
+                                </div>
+                            </h3>
+                            <p class="menu-item-description">
+                                Ingrediente: Sos de rosii, salam, mozzarella, ardei gras<br>
+                                The best from town!<br>
+                                670 g
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img class="menu-item-image" src="./resource/shaorma.jpg" alt="shaorma">
+                        <div class="menu-item-text">
+                            <h3 class="menu-item-heading">
+                                <span class="menu-item-name">Shaorma la lipie Mare</span>
+                                <span class="menu-item-price">$12.99</span>
+                                <div class="windowincrement-container">
+                                    <button class="buttonincrment" onclick="decrement('number2','Shaorma la lipie Mare','12.99')">-</button>
+                                    <input  class="windowincrement" id="number2" value="0">
+                                    <button class="buttonincrment" onclick="increment('number2','Shaorma la lipie Mare','12.99')">+</button>
+                                </div>
+                            </h3>
+                            <p class="menu-item-description">
+                                Ingrediente: Lipie - piept de pui crocant - cartofi curatati si prajiti - sos castraveti - maioneza cu usturoi - salata iceberg - chilli
+                                1070 g
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="menu-group-heading">
+                    Dessert
+                </h2>
+                <div class="menu-group">
+                    <div class="menu-item">
+                        <img class="menu-item-image" src="./resource/tortciresechiocolata.jpg" alt="tortciresechiocolata">
+                        <div class="menu-item-text">
+                            <h3 class="menu-item-heading">
+                                <span class="menu-item-name">Tort cu Cirese si Ciocolata</span>
+                                <span class="menu-item-price">$3.90</span>
+                                <div class="windowincrement-container">
+                                    <button class="buttonincrment" onclick="decrement('number3','Tort cu Cirese si Ciocolata','3.90')">-</button>
+                                    <input  class="windowincrement" id="number3" value="0">
+                                    <button class="buttonincrment" onclick="increment('number3','Tort cu Cirese si Ciocolata','3.90')">+</button>
+                                </div>
+                            </h3>
+                            <p class="menu-item-description">
+                                Ingrediente:<br>
+                                Cremă de cacao, cireșe, vișine, zahăr, lapte praf, ulei de cocos, ou, amidon,lapte.<br>
+                                Gramaj: 170 gr.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img class="menu-item-image" src="./resource/minipapanasi.jpg" alt="minipapanas">
+                        <div class="menu-item-text">
+                            <h3 class="menu-item-heading">
+                                <span class="menu-item-name">Mini papanasi cu ciocolata</span>
+                                <span class="menu-item-price">$5.50</span>
+                                <div class="windowincrement-container">
+                                    <button class="buttonincrment" onclick="decrement('number4','Mini papanasi cu ciocolata','5.50')">-</button>
+                                    <input  class="windowincrement" id="number4" value="0">
+                                    <button class="buttonincrment" onclick="increment('number4','Mini papanasi cu ciocolata','5.50')">+</button>
+                                </div>
+                            </h3>
+                            <p class="menu-item-description">
+                                Ingrediente: Branza de vaci, faina, zahar, condimente, Nutella.<br>
+                                250 g
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img class="menu-item-image" src="./resource/clatitegem.jpg" alt="clatitegem">
+                        <div class="menu-item-text">
+                            <h3 class="menu-item-heading">
+                                <span class="menu-item-name">Clatite cu Gem</span>
+                                <span class="menu-item-price">$4.44</span>
+                                <div class="windowincrement-container">
+                                    <button class="buttonincrment" onclick="decrement('number5','Clatite cu Gem','4.44')">-</button>
+                                    <input  class="windowincrement" id="number5" value="0">
+                                    <button class="buttonincrment" onclick="increment('number5','Clatite cu Gem','4.44')">+</button>
+                                </div>
+                            </h3>
+                            <p class="menu-item-description">
+                                2 x buc.clatite cu dulceata.<br>
+                                200 g
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="testare.js"></script>
+</body>
+</html>

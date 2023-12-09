@@ -1,0 +1,110 @@
+.container {
+    <!-- pentru a centra intreaga pagina -->
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5em;
+}
+
+.menu {
+
+    <!-- este gandit pentru telefon prima data, sa arate mandru -->
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.menu-group-heading {
+
+    <!-- facem delimitarea -->
+    margin: 0;
+    padding-bottom: 1em; <!-- 1*14 px=14px -->
+    border-bottom: 2px solid #ccc;
+}
+
+.menu-group {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1.5em 0;
+}
+
+.menu-item {
+    display: flex;
+}
+
+.menu-item-image {
+
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+}
+
+.menu-item-text {
+    flex-grow: 1;
+}
+
+.menu-item-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+
+}
+
+.menu-item-name {
+    margin-right: 1.5em;
+}
+
+.menu-item-description {
+    line-height: 1.6;
+}
+
+@media screen and (min-width: 992px) {
+
+    .menu {
+        font-size: 16px;
+    }
+
+    .menu-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-item-image {
+        width: 125px;
+        height: 125px;
+    }
+}
+head{
+
+}
+.top-section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('./resource/Backgroud.jpg');
+    background-size: cover;
+}
+.menu-section {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    transition: background-color 0.5s;
+
+}
+.menu-section:hover {
+    background-color: #333;
+}
+
+.container{
+    position: relative;
+    position: fixed;
+}
